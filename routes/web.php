@@ -17,3 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/mine', "App\Http\Controllers\MineController@index");
+Route::get('/mine/execute/{mine}', "App\Http\Controllers\MineController@execute");

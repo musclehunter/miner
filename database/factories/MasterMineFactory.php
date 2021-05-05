@@ -22,7 +22,9 @@ class MasterMineFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'distance' => 10,
+            'description' => $this->faker->text()
         ];
     }
 }

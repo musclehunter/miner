@@ -15,6 +15,9 @@ class CreateMasterMinesTable extends Migration
     {
         Schema::create('master_mines', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->integer('distance');
+            $table->string('description');
             $table->timestamps();
         });
     }
