@@ -1,89 +1,62 @@
-# miner
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-Laravelの学習用になんかつくります
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-## つくる予定のもの
+## About Laravel
 
-- 早く動かせるようにするためできる限り簡素化します
-- 鉱石を掘り出すゲーム？
-- 鉱石を掘る場所を選べる
-    - 選んだ場所によって出やすい鉱石の種類がある
-- 鉱石を掘るための装備が存在する
-- 鉱石にはレア度みたいなもんがある
-- 鉱石は売れる
-- キャラクターのステータスによって鉱石の産出具合がかわる？
-- キャラクターのステータス
-    - HP 0になると死にます
-    - 力 鉱石の採掘量、一度に掘れる量に影響する アイテムの所持量に影響する
-    - すばやさ 鉱石を掘るのにかかる時間に影響する 移動速度に影響する
-    - 器用さ 鉱石の採掘量、採掘されるレア度に影響する
-    - 感覚 敵の気配を察知します。生存率があがる
-    - なんかスキルがある
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## 採掘
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-- 鉱山を選んで採掘に出る
-- 採掘には時間がかかり、終了までの時間をカウントダウンして表示する
-- 鉱山までの距離によって採掘時間がかわる
-- 採掘量はキャラクターのステータスによって変わる
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-### 画面
+## Learning Laravel
 
-1. 掘る場所を選ぶ
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-### マスターデータ
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-1. item
-    - id int
-    - type
-    - sub_type int
-    - name string
-    - weight int
-    - level int
-    - description
-1. 鉱山 master_mines
-    - id int
-    - name string
-    - distance int
-    - description
-1. 鉱石ドロップ率 mine_drop
-    - id
-    - ore_id
-    - mine_id
-    - rate
-    - dex
-1. item_type
-    - id
-    - name
+## Laravel Sponsors
 
-### ゲームデータ
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-1. characters
-    - id
-    - name
-1. character_status
-    - character_id
-    - level
-    - exp
-    - hp
-    - str
-    - quick
-    - dex
-    - sense
-1. キャラクターの持ち物
-    - id
-    - item_id
-    - quantity
-1. character_actions
-    - id
-    - character_id
-    - action_type
-    - state
-    - complete_at
-    - message
-1. character_minings
-    - id
-    - character_id
-    - mine_id
-    
-### ログ
+### Premium Partners
+
+- **[Vehikl](https://vehikl.com/)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Cubet Techno Labs](https://cubettech.com)**
+- **[Cyber-Duck](https://cyber-duck.co.uk)**
+- **[Many](https://www.many.co.uk)**
+- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
+- **[DevSquad](https://devsquad.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
+- **[OP.GG](https://op.gg)**
+
+## Contributing
+
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+
+## Code of Conduct
+
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+
+## Security Vulnerabilities
+
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
